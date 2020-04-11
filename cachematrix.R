@@ -41,3 +41,32 @@ cacheSolve <- function(x, ...) {
   x$setInv(inverseMat)                             #set the inverse matrix 
   return(inverseMat)  
 }
+
+
+##Tests
+# > x=matrix(1:4,2,2)
+# > e=makeCacheMatrix(x)
+# > e$getMat()
+# [,1] [,2]
+# [1,]    1    3
+# [2,]    2    4
+# > e$getInv()
+# NULL
+# > cacheSolve(e)
+# [,1] [,2]
+# [1,]   -2  1.5
+# [2,]    1 -0.5
+# > e$getInv()
+# [,1] [,2]
+# [1,]   -2  1.5
+# [2,]    1 -0.5
+# > 
+#   > cacheSolve(e)
+# Fetching Cached Inverse Matrix
+# [,1] [,2]
+# [1,]   -2  1.5
+# [2,]    1 -0.5
+# > e$getInv()
+# [,1] [,2]
+# [1,]   -2  1.5
+# [2,]    1 -0.5

@@ -5,7 +5,7 @@
 ## this function creates a matrix object that caches its inverse value
 
 makeCacheMatrix <- function(x = matrix()) {
-  inverseMat <- NULL
+  inverseMat <- NULL                                  #setting the inverse matrix as NULL initially
   
   #set the value of the Matrix
   setMat <- function(y) {
